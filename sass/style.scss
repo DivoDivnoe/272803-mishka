@@ -4,29 +4,28 @@
 
 //common
 @import 'layout/fonts.scss';
+@import 'layout/global.scss';
 
-@import 'page-wrapper.scss';
-@import 'page-header.scss';
-@import 'main-nav.scss';
-@import 'page-main.scss';
-@import 'banner.scss';
-@import 'main-title.scss';
-@import 'main-menu.scss';
-@import 'hit.scss';
-@import 'stats.scss';
-@import 'button.scss';
-@import 'about.scss';
-@import 'reviews.scss';
-@import 'slider.scss';
-@import 'page-contacts.scss';
-@import 'contacts.scss';
-@import 'page-footer.scss';
-@import 'socials.scss';
-@import 'copyright.scss';
+@import 'blocks/page-header.scss';
+@import 'blocks/main-nav.scss';
+@import 'blocks/banner.scss';
+@import 'blocks/main-title.scss';
+@import 'blocks/main-menu.scss';
+@import 'blocks/hit.scss';
+@import 'blocks/stats.scss';
+@import 'blocks/button.scss';
+@import 'blocks/about.scss';
+@import 'blocks/reviews.scss';
+@import 'blocks/slider.scss';
+@import 'blocks/page-contacts.scss';
+@import 'blocks/contacts.scss';
+@import 'blocks/page-footer.scss';
+@import 'blocks/socials.scss';
+@import 'blocks/copyright.scss';
 
-@import 'catalog.scss';
-@import 'production.scss';
+@import 'blocks/catalog.scss';
+@import 'blocks/production.scss';
 
-@import 'order.scss';
-@import 'form.scss';
-@import 'person-data.scss';
+@import 'blocks/order.scss';
+@import 'blocks/form.scss';
+@import 'blocks/person-data.scss';
