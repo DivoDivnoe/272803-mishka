@@ -1,4 +1,32 @@
 .stats {
+  display: flex;
   font-size: 15px;
   line-height: 1.33;
+  border-collapse: collapse;
+}
+
+.stats__headings {
+  flex-grow: 1;
+}
+
+.stats__headings-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.stats__values-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.stats__value {
+  padding-left: 8px;
+  right: 8px;
+}
+
+.stats__heading,
+.stats__value {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ececec;
 }

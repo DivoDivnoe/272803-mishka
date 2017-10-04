@@ -1,3 +1,172 @@
 .main-nav {
+  display: flex;
+}
+
+.main-nav__list {
+  position: absolute;
+  bottom: 999999px;
+  left: 0;
+  margin: 0;
+  padding: 0;
   width: 100%;
+  list-style: none;
+  transform: translateY(calc(100% + 1px));
+  z-index: 100;
+}
+
+.main-nav__item {
+  position: relative;
+  background-color: white;
+  border-bottom: 1px solid #ececec;
+}
+
+.main-nav__link {
+  display: block;
+  padding: 25px 0 25px 75px;
+  color: black;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.main-nav__toggle {
+  width: 20px;
+  height: 14px;
+  margin-top: 31px;
+  margin-bottom: 33px;
+  margin-left: auto;
+  background: white url("../img/icon-menu-open.svg") no-repeat center;
+  border: none;
+  cursor: pointer;
+}
+
+.main-nav__extra {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: none;
+  width: 100%;
+  transform: translateY(50px);
+}
+
+.main-nav__extra-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.main-nav__extra-link {
+  font-size: 15px;
+}
+
+@media screen and (min-width: $tablet) {
+  .main-nav {
+    display: block;
+  }
+
+  .main-nav__list {
+    position: static;
+    display: flex;
+    transform: none;
+  }
+
+  .main-nav__item {
+    border-bottom: 0;
+
+    &--catalog {
+      width: 167px;
+    }
+
+    &--form {
+      width: auto;
+      flex-grow: 1;
+    }
+
+    &--search {
+      width: 84px;
+      border-right: 1px solid #ececec;
+      border-left: 1px solid #ececec;
+    }
+
+    &--basket {
+      width: 266px;
+      text-align: right;
+    }
+  }
+
+  .main-nav__link {
+    padding: 34px 0;
+    font-size: 15px;
+
+    &--catalog,
+    &--form {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 0;
+      transform: translateY(50px);
+      z-index: 100;
+    }
+  }
+
+  .main-nav__item-text {
+    display: none;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__extra {
+    display: flex;
+  }
+
+  .main-nav__extra-list {
+    display: none;
+  }
+
+  .main-nav__extra-delivery {
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .main-nav__item {
+    &--catalog {
+      width: 185px;
+      border-right: 1px solid #ececec;
+    }
+
+    &--form {
+      padding-left: 36px;
+    }
+  }
+
+  .main-nav__link {
+    &--catalog,
+    &--form {
+      position: static;
+      padding: 34px 0;
+      transform: none;
+    }
+  }
+
+  .main-nav__extra-list {
+    display: flex;
+  }
+
+  .main-nav__extra-item {
+    &--new {
+      width: 185px;
+    }
+
+    &--sale {
+      padding-left: 36px;
+    }
+  }
 }

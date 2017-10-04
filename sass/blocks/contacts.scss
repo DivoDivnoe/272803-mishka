@@ -1,3 +1,67 @@
 .contacts {
+  display: table;
   line-height: 2;
+  border-collapse: collapse;
+}
+
+.contacts__column {
+  display: table-column;
+}
+
+.contacts__item {
+  display: table-row;
+}
+
+.contacts__heading {
+  padding-right: 30px;
+}
+
+.contacts__value {
+  display: table-cell;
+  padding: 20px 0;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 2;
+}
+
+.contacts__value-item {
+  display: block;
+}
+
+@media screen and (min-width: $tablet) {
+  .contacts {
+    display: flex;
+  }
+
+  .contacts__item {
+    display: flex;
+    width: 50%;
+  }
+
+  .contacts__heading {
+    padding-right: 27px;
+  }
+
+  .contacts__value {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .contacts {
+    flex-direction: column;
+  }
+
+  .contacts__item {
+    width: auto;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .contacts__value {
+    flex-grow: 1;
+  }
 }

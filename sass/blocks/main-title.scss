@@ -5,3 +5,17 @@
   color: black;
   text-align: center;
 }
+
+@media screen and (min-width: $tablet) {
+  .main-title {
+    font-size: 43px;
+    line-height: 1.16;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .main-title {
+    font-size: 53px;
+    line-height: 1.08;
+  }
+}

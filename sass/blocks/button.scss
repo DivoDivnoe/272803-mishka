@@ -1,9 +1,19 @@
 .button {
   display: inline-block;
+  width: 100%;
   padding: 15px;
   font-weight: bold;
   color: $grey;
   text-align: center;
   text-transform: uppercase;
   border: 2px solid $grey;
+  cursor: pointer;
+}
+
+@media screen and (min-width: $tablet) {
+  .button {
+    width: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }

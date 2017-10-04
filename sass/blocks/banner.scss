@@ -1,3 +1,18 @@
 .banner {
-  background-color: $light-grey;
+  height: 282px;
+  padding-top: 70px;
+  background: $light-grey url("../img/hero-mobile@1x.jpg") no-repeat center -20px;
+}
+
+.banner__title {
+  margin: 0;
+}
+
+@media screen and (min-width: $tablet) {
+  .banner {
+    height: 626px;
+    padding-top: 155px;
+    background-position: center;
+    background-size: cover;
+  }
 }

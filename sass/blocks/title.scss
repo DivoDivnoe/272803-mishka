@@ -1,5 +1,22 @@
 .title {
-  font-weight: bold;
-  font-size: 15px;
+  margin: 0;
+  padding: 30px 0;
+  font-size: 25px;
   line-height: 1.2;
+  color: black;
+}
+
+@media screen and (min-width: $tablet) {
+  .title {
+    padding: 52px 0;
+    font-size: 43px;
+    line-height: 1.16;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .title {
+    font-size: 53px;
+    line-height: 1.08;
+  }
 }

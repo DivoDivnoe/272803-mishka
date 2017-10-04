@@ -20,28 +20,18 @@ body {
   font-style: normal;
   font-size: 15px;
   line-height: 1.42;
-  font-family: 'Open Sans', 'Arial', sans-serif;
+  font-family: "Open Sans", "Arial", sans-serif;
   color: $grey;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .container {
-  width: 81.25%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.page-wrapper {
-  width: 100%;
-  min-height: 100%;
-  overflow: hidden;
-}
-
-.page-main {
-  width: 100%;
-}
-
-.section {
-  width: 100%;
+  width: 260px;
+  margin: 0 auto;
 }
 
 a {
@@ -62,4 +52,40 @@ a {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
+}
+
+//Вот здесь не уверен насчет правильности
+a.disabled {
+  cursor: default;
+
+  &:hover,
+  &:active {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  body {
+    font-size: 17px;
+  }
+
+  .container {
+    width: 668px;
+  }
+
+  .title {
+    font-size: 43px;
+    line-height: 1.16;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .container {
+    width: 1050px;
+  }
+
+  .title {
+    font-size: 53px;
+    line-height: 1.08;
+  }
 }
