@@ -1,3 +1,32 @@
 .slider {
   overflow-x: hidden;
 }
+
+.slider__list {
+  display: flex;
+  width: 520px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.slider__item {
+  width: 50%;
+  vertical-align: middle;
+}
+
+@media screen and (min-width: $tablet) {
+  .slider__list {
+    width: 1336px;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .slider__list {
+    width: 1750px;
+  }
+
+  .slider__item {
+    padding-right: 108px;
+  }
+}

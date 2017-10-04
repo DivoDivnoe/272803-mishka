@@ -1,4 +1,40 @@
 .page-header {
-  width: 100%;
+  border-top: 1px solid #ececec;
   border-bottom: 1px solid #ececec;
+}
+
+.page-header__wrapper {
+  position: relative;
+}
+
+.page-header__logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: $tablet) {
+  .page-header {
+    border-top: 0;
+    border-bottom: 1px solid #ececec;
+  }
+
+  .page-header__logo {
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 1000;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .page-header {
+    min-width: 1150px;
+  }
+
+  .page-header__logo {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+  }
 }

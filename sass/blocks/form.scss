@@ -1,0 +1,309 @@
+.form__section {
+  padding: 0;
+  border: 0;
+  border-top: 1px solid $light-green;
+}
+
+.form__title {
+  position: relative;
+  top: -13px;
+  left: 0;
+  display: inline-block;
+  margin: 0 0 25px 0;
+  padding-right: 22px;
+  font-weight: bold;
+  font-size: 17px;
+  color: $light-green;
+  text-transform: uppercase;
+  background-color: white;
+
+  &--phone,
+  &--email {
+    margin-bottom: 0;
+  }
+}
+
+.form__label {
+  position: relative;
+  display: block;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 1;
+
+  &--color,
+  &--type {
+    padding-left: 63px;
+  }
+
+  &--type {
+    margin-bottom: 25px;
+  }
+
+  &--color {
+    margin-bottom: 45px;
+  }
+}
+
+.form__type,
+.form__color {
+  display: none;
+}
+
+.form__type-indicator,
+.form__color-indicator {
+  width: 40px;
+  height: 40px;
+  border: 2px solid $grey;
+}
+
+.form__type-indicator {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  display: flex;
+  border-radius: 50%;
+
+  &::after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    margin: auto;
+    background-color: $light-green;
+    border-radius: 50%;
+    opacity: 0;
+  }
+}
+
+.form__color-indicator {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  display: block;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 30%;
+    left: 40%;
+    width: 3px;
+    background-color: black;
+    transform-origin: bottom;
+    opacity: 0;
+  }
+
+  &::before {
+    left: 42%;
+    height: 20%;
+    transform: rotate(-45deg);
+  }
+
+  &::after {
+    left: 38%;
+    height: 40%;
+    transform: rotate(45deg);
+  }
+}
+
+.form__type:checked + .form__type-indicator::after {
+  opacity: 1;
+}
+
+.form__color:checked + .form__color-indicator::before,
+.form__color:checked + .form__color-indicator::after {
+  opacity: 1;
+}
+
+.form__person-item {
+  margin-bottom: 23px;
+}
+
+.form__field {
+  padding: 15px 0;
+  font-size: 17px;
+  border: 0;
+  border-bottom: 2px solid black;
+
+  &::placeholder {
+    opacity: 0.3;
+  }
+}
+
+.form__phone,
+.form__email {
+  margin-bottom: 30px;
+}
+
+.form__email {
+  border-top: 1px solid $light-green;
+}
+
+.form__extra-field {
+  width: 100%;
+  height: 142px;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 2px solid $grey;
+  font-size: 17px;
+  resize: none;
+
+  &::placeholder {
+    opacity: 0.3;
+  }
+}
+
+.form__legend {
+  display: block;
+  margin-bottom: 33px;
+  font-size: 14px;
+}
+
+.form__submit {
+  background-color: transparent;
+}
+
+@media screen and (min-width: $tablet) {
+  .form__section {
+    border-top: 0;
+
+    &:nth-child(2n) {
+      background-color: #f1f1f1;
+    }
+  }
+
+  .form__section-wrapper {
+    display: flex;
+    align-items: baseline;
+    border-top: 0;
+
+    &--contacts {
+      display: block;
+    }
+  }
+
+  .form__title {
+    position: static;
+    flex-shrink: 0;
+    width: 25%;
+    background-color: transparent;
+  }
+
+  .form__radios,
+  .form__checkboxes,
+  .form__person-data,
+  .form__phone-label,
+  .from__email-label {
+    width: 75%;
+  }
+
+  .form__type-indicator {
+    width: 52px;
+    height: 52px;
+
+    &::after {
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  .form__checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .form__label {
+    &--type,
+    &--color {
+      margin-bottom: 58px;
+    }
+
+    &--color:nth-child(2n + 1) {
+      width: 262px;
+    }
+
+    &--person {
+      padding-right: 25px;
+    }
+  }
+
+  .form__color-indicator {
+    width: 54px;
+    height: 54px;
+
+    &::before {
+      height: 30%;
+    }
+
+    &::after {
+      height: 50%;
+    }
+  }
+
+  .form__person-item {
+    display: flex;
+    align-items: center;
+  }
+
+  .form__field {
+    font-size: 19px;
+
+    &--person {
+      flex-grow: 1;
+    }
+
+    &--phone,
+    &--email {
+      width: 100%;
+      background-color: transparent;
+    }
+  }
+
+  .form__phone,
+  .form__email {
+    display: flex;
+  }
+
+  .form__phone-label,
+  .form__email-label {
+    flex-grow: 1;
+  }
+
+  .form__email {
+    border-top: 0;
+  }
+
+  .form__extra {
+    padding: 50px 0;
+  }
+
+  .form__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .form__legend {
+    order: 1;
+    margin-bottom: 0;
+    font-size: 17px;
+    line-height: 1.76;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .form__title {
+    width: 16.66666666%;
+  }
+
+  .form__radios,
+  .form__checkboxes,
+  .form__person-data,
+  .form__phone-label,
+  .form__email-label {
+    width: 83.33333333%;
+  }
+
+  .form__bottom {
+    padding-left: 175px;
+  }
+}
