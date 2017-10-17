@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HTML Academy: Мишка</title>
-    <link rel="stylesheet" href="css/normalize.css">
     <link href="css/style.css" rel="stylesheet">
   </head>
 
@@ -19,7 +18,7 @@
 
           <nav class="main-nav">
             <button class="main-nav__toggle" type="button"></button>
-            <ul class="main-nav__list">
+            <ul class="main-nav__list no-js">
               <li class="main-nav__item main-nav__item--catalog">
                 <a class="main-nav__link main-nav__link--catalog" href="catalog.html">Каталог товаров</a>
               </li>
@@ -69,11 +68,11 @@
             </h2>
             <ul class="main-menu__list">
               <li class="main-menu__item main-menu__item--interior">
-                <a href="#" class="main-menu__link">Предметы<br>
+                <a href="#" class="main-menu__link main-menu__link--interior">Предметы<br>
                   интерьера</a>
               </li>
               <li class="main-menu__item main-menu__item--toys">
-                <a href="#" class="main-menu__link">Детские<br>
+                <a href="#" class="main-menu__link main-menu__link--toys">Детские<br>
                   игрушки</a>
               </li>
             </ul>
@@ -260,7 +259,6 @@
           </div>
         </div>
       </footer>
-
       <div class="modal-wrapper">
         <div class="modal">
           <h2 class="modal__title title">
@@ -285,5 +283,6 @@
         </div>
       </div>
     </div>
+  <script src="js/app.js"></script>
   </body>
 </html>

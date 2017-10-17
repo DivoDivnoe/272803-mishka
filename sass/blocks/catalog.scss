@@ -8,8 +8,21 @@
   @include list-reset;
 }
 
-.catalog__item {
+.catalog__link {
+  display: block;
   margin-bottom: 30px;
+
+  &:hover {
+    box-shadow: 0 6px 10px 0 rgba(black, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px 0 rgba(black, 0.1);
+  }
+}
+
+.catalog__picture {
+  display: block;
 }
 
 .catalog__description {
@@ -26,6 +39,7 @@
 .catalog__stats {
   display: block;
   margin-bottom: 27px;
+  font-weight: 400;
   font-size: 13px;
   line-height: 2.31;
 }
@@ -46,6 +60,9 @@
 
   .catalog__item {
     display: flex;
+  }
+
+  .catalog__link {
     margin-bottom: 54px;
   }
 
@@ -94,10 +111,14 @@
 
   .catalog__list {
     display: flex;
+    flex-wrap: wrap;
   }
 
   .catalog__item {
     flex-direction: column;
+  }
+
+  .catalog__link {
     width: 315px;
     margin-bottom: 0;
 

@@ -4,14 +4,23 @@
 
 .main-nav__list {
   position: absolute;
-  bottom: 999999px;
+  bottom: 0;
   left: 0;
+  display: none;
   margin: 0;
   padding: 0;
   width: 100%;
   list-style: none;
   transform: translateY(calc(100% + 1px));
   z-index: 100;
+
+  &.no-js {
+    display: block;
+  }
+
+  &--opened {
+    display: block;
+  }
 }
 
 .main-nav__item {
@@ -25,12 +34,14 @@
   padding: 25px 0 25px 75px;
   color: black;
 
-  &:hover {
-    opacity: 0.6;
-  }
+  &[href] {
+    &:hover {
+      opacity: 0.6;
+    }
 
-  &:active {
-    opacity: 0.3;
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
 
@@ -72,6 +83,7 @@
   .main-nav__list {
     position: static;
     display: flex;
+    flex-wrap: wrap;
     transform: none;
   }
 
@@ -112,6 +124,10 @@
       transform: translateY(50px);
       z-index: 100;
     }
+
+    &--search {
+      height: 100%;
+    }
   }
 
   .main-nav__item-text {
@@ -143,7 +159,7 @@
     }
 
     &--form {
-      padding-left: 36px;
+      display: flex;
     }
   }
 
@@ -153,6 +169,11 @@
       position: static;
       padding: 34px 0;
       transform: none;
+    }
+
+    &--form {
+      padding-left: 36px;
+      padding-right: 36px;
     }
   }
 

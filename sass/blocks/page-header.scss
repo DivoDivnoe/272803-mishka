@@ -1,10 +1,13 @@
 .page-header {
+  position: relative;
   border-top: 1px solid #ececec;
   border-bottom: 1px solid #ececec;
 }
 
 .page-header__wrapper {
   position: relative;
+  width: 320px;
+  padding: 0 30px;
 }
 
 .page-header__logo {
@@ -20,6 +23,11 @@
     border-bottom: 1px solid #ececec;
   }
 
+  .page-header__wrapper {
+    width: 668px;
+    padding: 0;
+  }
+
   .page-header__logo {
     left: 0;
     transform: translateY(-50%);
@@ -30,6 +38,10 @@
 @media screen and (min-width: $desktop) {
   .page-header {
     min-width: 1150px;
+  }
+
+  .page-header__wrapper {
+    width: 1050px;
   }
 
   .page-header__logo {

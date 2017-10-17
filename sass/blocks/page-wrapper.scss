@@ -1,21 +1,8 @@
 .page-wrapper {
   display: flex;
   flex-direction: column;
-  width: 320px;
+  min-width: 320px;
   min-height: 100%;
   margin: 0 auto;
   overflow: hidden;
-}
-
-@media screen and (min-width: $tablet) {
-  .page-wrapper {
-    width: $tablet;
-  }
-}
-
-@media screen and (min-width: $desktop) {
-  .page-wrapper {
-    min-width: 1150px;
-    width: auto;
-  }
 }

@@ -54,16 +54,6 @@ a {
   border: 0;
 }
 
-//Вот здесь не уверен насчет правильности
-a.disabled {
-  cursor: default;
-
-  &:hover,
-  &:active {
-    opacity: 1;
-  }
-}
-
 @media screen and (min-width: $tablet) {
   body {
     font-size: 17px;

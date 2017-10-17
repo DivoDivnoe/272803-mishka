@@ -49,6 +49,8 @@
 
 @media screen and (min-width: $tablet) {
   .reviews {
+    width: 768px;
+    margin: 0 auto;
     background: url("../img/review@1x.jpg") no-repeat top left;
   }
 
@@ -78,6 +80,7 @@
 
 @media screen and (min-width: $desktop) {
   .reviews {
+    width: 1050px;
     margin-bottom: 140px;
     background: initial;
   }
