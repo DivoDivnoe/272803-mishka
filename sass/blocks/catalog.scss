@@ -1,5 +1,5 @@
 .catalog__main-title {
-  padding: 70px 0;
+  padding: 69px 0 77px 0;
   margin: 0 0 30px 0;
   background-color: #f1f1f1;
 }
@@ -10,7 +10,10 @@
 
 .catalog__link {
   display: block;
-  margin-bottom: 30px;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
 
   &:hover {
     box-shadow: 0 6px 10px 0 rgba(black, 0.1);
@@ -32,28 +35,33 @@
 
 .catalog__title {
   margin: 0;
-  padding: 28px 0 15px 0;
+  padding: 26px 0 5px 0;
   font-size: 17px;
 }
 
 .catalog__stats {
   display: block;
-  margin-bottom: 27px;
+  margin-bottom: 19px;
   font-weight: 400;
   font-size: 13px;
   line-height: 2.31;
 }
 
 .catalog__price {
-  padding: 25px 0;
+  padding: 21px 0 27px 0;
   font-weight: bold;
+  font-size: 15px;
   line-height: 1.6;
   border-top: 1px solid #ececec;
 }
 
 @media screen and (min-width: $tablet) {
+  .catalog {
+    padding-bottom: 53px;
+  }
+
   .catalog__main-title {
-    padding: 95px 0;
+    padding: 95px 0 80px 0;
     margin-bottom: 80px;
     background-color: #f1f1f1;
   }
@@ -62,7 +70,7 @@
     display: flex;
   }
 
-  .catalog__link {
+  .catalog__link:not(:last-child) {
     margin-bottom: 54px;
   }
 
@@ -79,11 +87,11 @@
   .catalog__description {
     display: flex;
     flex-direction: column;
-    padding: 0 60px 0 30px;
+    padding: 0 60px 0 25px;
   }
 
   .catalog__title {
-    padding-bottom: 0;
+    padding-bottom: 5px;
     font-size: 20px;
     line-height: 1.2;
   }
@@ -96,16 +104,20 @@
   .catalog__about {
     flex-grow: 1;
   }
+
+  .catalog__price {
+    margin-top: auto;
+  }
 }
 
 @media screen and (min-width: $desktop) {
   .catalog {
-    margin-bottom: 57px;
+    padding-bottom: 30px;
   }
 
   .catalog__main-title {
     padding: 95px 0;
-    margin-bottom: 130px;
+    margin-bottom: 134px;
     background-color: #f1f1f1;
   }
 
@@ -116,11 +128,16 @@
 
   .catalog__item {
     flex-direction: column;
+    flex-grow: 1;
   }
 
   .catalog__link {
+    display: flex;
     width: 315px;
-    margin-bottom: 0;
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
 
     &:not(:nth-of-type(3n)) {
       margin-right: 51px;
@@ -129,10 +146,18 @@
 
   .catalog__image,
   .catalog__description {
-    width: auto;
+    width: 100%;
   }
 
   .catalog__description {
-    flex-grow: 1;
+    padding-right: 55px;
+  }
+
+  .catalog__stats {
+    margin-bottom: 37px;
+  }
+
+  .catalog__price {
+    font-size: 17px;
   }
 }

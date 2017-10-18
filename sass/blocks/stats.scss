@@ -6,22 +6,17 @@
 }
 
 .stats__headings {
-  flex-grow: 1;
+  min-width: 97px;
 }
 
-.stats__headings-row {
-  display: flex;
-  flex-direction: column;
-}
-
+.stats__headings-row,
 .stats__values-row {
   display: flex;
   flex-direction: column;
 }
 
-.stats__value {
-  padding-left: 8px;
-  right: 8px;
+.stats__values {
+  flex-grow: 1;
 }
 
 .stats__heading,

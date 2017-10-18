@@ -31,7 +31,7 @@
 
 .main-menu__link {
   display: block;
-  padding: 27px 30px;
+  padding: 27px 30px 30px 30px;
   font-weight: bold;
   font-size: 19px;
   line-height: 1.26;
@@ -57,8 +57,6 @@
 
 @media screen and (min-width: $tablet) {
   .main-menu {
-    margin-top: -120px;
-
     & .main-menu__item:hover {
       margin-top: -5px;
     }
@@ -94,6 +92,10 @@
 }
 
 @media screen and (min-width: $desktop) {
+  .main-menu {
+    margin-bottom: 77px;
+  }
+
   .main-menu__wrapper {
     width: 1050px;
   }

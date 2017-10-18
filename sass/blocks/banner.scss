@@ -12,7 +12,14 @@
   .banner {
     min-height: 626px;
     padding-top: 155px;
-    background-position: center;
-    background-size: cover;
+    background-size: 1150px;
+    background-position-y: 0;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .banner {
+    background-size: 1252px;
+    background-position-y: -40px;
   }
 }
