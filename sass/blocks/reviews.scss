@@ -125,4 +125,10 @@
     margin-top: 42px;
     margin-bottom: 95px;
   }
+
+  .reviews__author-item {
+    &--name {
+      font-size: 17px;
+    }
+  }
 }
