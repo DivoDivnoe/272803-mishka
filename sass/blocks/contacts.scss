@@ -18,10 +18,24 @@
 
 .contacts__value {
   display: table-cell;
-  padding: 20px 0;
+  padding: 16px 0;
   font-weight: normal;
   font-size: 15px;
   line-height: 2;
+
+  &--email {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      height: 1px;
+      background-color: $light-green;
+    }
+  }
 }
 
 .contacts__value-item {
@@ -35,16 +49,19 @@
 
   .contacts__item {
     display: flex;
+    align-items: flex-start;
     width: 50%;
   }
 
   .contacts__heading {
-    padding-right: 27px;
+    padding-right: 24px;
   }
 
   .contacts__value {
     padding: 0;
     margin: 0;
+    font-size: 17px;
+    line-height: 1.85;
   }
 }
 
@@ -57,11 +74,7 @@
     width: auto;
 
     &:not(:last-child) {
-      margin-bottom: 30px;
+      margin-bottom: 26px;
     }
-  }
-
-  .contacts__value {
-    flex-grow: 1;
   }
 }

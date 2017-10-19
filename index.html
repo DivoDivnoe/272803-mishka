@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HTML Academy: Мишка</title>
-    <link rel="stylesheet" href="css/normalize.css">
     <link href="css/style.css" rel="stylesheet">
   </head>
 
@@ -18,8 +17,10 @@
           </a>
 
           <nav class="main-nav">
-            <button class="main-nav__toggle" type="button"></button>
-            <ul class="main-nav__list">
+            <button class="main-nav__toggle" type="button">
+              <span class="visually-hidden">Открыть меню</span>
+            </button>
+            <ul class="main-nav__list no-js">
               <li class="main-nav__item main-nav__item--catalog">
                 <a class="main-nav__link main-nav__link--catalog" href="catalog.html">Каталог товаров</a>
               </li>
@@ -69,11 +70,11 @@
             </h2>
             <ul class="main-menu__list">
               <li class="main-menu__item main-menu__item--interior">
-                <a href="#" class="main-menu__link">Предметы<br>
+                <a href="#" class="main-menu__link main-menu__link--interior">Предметы<br>
                   интерьера</a>
               </li>
               <li class="main-menu__item main-menu__item--toys">
-                <a href="#" class="main-menu__link">Детские<br>
+                <a href="#" class="main-menu__link main-menu__link--toys">Детские<br>
                   игрушки</a>
               </li>
             </ul>
@@ -140,24 +141,24 @@
             <div class="about__list">
               <div class="about__list-column about__list-column--left">
                 <p class="about__item about__item--eco">
-                  Экологически чистые материалы
+                  Экологически<br> чистые материалы
                 </p>
                 <p class="about__item about__item--scandinavian">
-                  Скандинавский стиль по российской цене
+                  Скандинавский стиль<br> по российской цене
                 </p>
                 <p class="about__item about__item--likes">
-                  Увеличивает лайки на фотографиях
+                  Увеличивает лайки<br> на фотографиях
                 </p>
               </div>
               <div class="about__list-column about__list-column--right">
                 <p class="about__item about__item--handmade">
-                  Связано вручную с любовью и умилением
+                  Связано вручную с<br> любовью и умилением
                 </p>
                 <p class="about__item about__item--domestic">
                   Поддержка отечественного производителя
                 </p>
                 <p class="about__item about__item--packing">
-                  Поставляется в подарочной упаковке
+                  Поставляется в<br> подарочной упаковке
                 </p>
               </div>
             </div>
@@ -191,8 +192,8 @@
                     больше лайков!
                   </p>
                   <div class="reviews__author">
-                    <span class="reviews__author-name">Анастасия Красильникова</span>
-                    <span class="reviews__author-nickname">@misssssiskras</span>
+                    <span class="reviews__author-item reviews__author-item--name">Анастасия Красильникова</span>
+                    <span class="reviews__author-item reviews__author-item--nickname">@misssssiskras</span>
                   </div>
                 </li>
               </ul>
@@ -208,7 +209,7 @@
         <section class="page-contacts section">
           <div class="page-contacts__wrapper">
             <div class="page-contacts__container container">
-              <h2 class="page-contacts__title title">
+              <h2 class="page-contacts__title">
                 Контакты:
               </h2>
               <div class="page-contacts__data contacts">
@@ -216,7 +217,7 @@
                 <div class="contacts__column contacts__column--last"></div>
                 <div class="contacts__item">
                   <span class="contacts__heading">e&#8209;mail:</span>
-                  <a class="contacts__value" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+                  <a class="contacts__value contacts__value--email" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
                 </div>
                 <div class="contacts__item">
                   <span class="contacts__heading">адрес:</span>
@@ -260,7 +261,6 @@
           </div>
         </div>
       </footer>
-
       <div class="modal-wrapper">
         <div class="modal">
           <h2 class="modal__title title">
@@ -285,5 +285,6 @@
         </div>
       </div>
     </div>
+  <script src="js/app.js"></script>
   </body>
 </html>

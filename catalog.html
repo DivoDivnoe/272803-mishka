@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Мишка каталог</title>
-    <link rel="stylesheet" href="css/normalize.css">
     <link href="css/style.css" rel="stylesheet">
   </head>
 
@@ -18,8 +17,10 @@
           </a>
 
           <nav class="main-nav">
-            <button class="main-nav__toggle" type="button"></button>
-            <ul class="main-nav__list">
+            <button class="main-nav__toggle" type="button">
+              <span class="visually-hidden">Открыть меню</span>
+            </button>
+            <ul class="main-nav__list no-js">
               <li class="main-nav__item main-nav__item--catalog">
                 <a class="main-nav__link main-nav__link--catalog disabled">Каталог товаров</a>
               </li>
@@ -50,56 +51,62 @@
         </div>
       </header>
 
-      <main class="page-wrapper">
+      <main class="page-main">
         <section class="catalog section">
           <h1 class="catalog__main-title main-title">
-            Каталог товаров:
+            Каталог товаров
           </h1>
           <div class="container">
-            <ul class="catalog__list">
-              <li class="catalog__item">
-                <div class="catalog__image">
-                  <img class="catalog__picture" src="img/photo-hare-mobile@1x.jpg" alt="Зайчик-попрыгайчик" width="260" height="195">
-                </div>
-                <div class="catalog__description">
-                  <div class="catalog__about">
-                    <h2 class="catalog__title">
-                      Зайчик-попрыгайчик
-                    </h2>
-                    <span class="catalog__stats">Рост 30 см, вес 200 г</span>
+            <div class="catalog__list">
+              <a class="catalog__link" href="#">
+                <article class="catalog__item">
+                  <div class="catalog__image">
+                    <img class="catalog__picture" src="img/photo-hare-mobile@1x.jpg" alt="Зайчик-попрыгайчик" width="260" height="195">
                   </div>
-                  <div class="catalog__price">1 200 руб.</div>
-                </div>
-              </li>
-              <li class="catalog__item">
-                <div class="catalog__image">
-                  <img class="catalog__picture" src="img/photo-bowl-mobile@1x.jpg" alt="Корзинка для белья" width="260" height="195">
-                </div>
-                <div class="catalog__description">
-                  <div class="catalog__about">
-                    <h2 class="catalog__title">
-                      Корзинка для белья
-                    </h2>
-                    <span class="catalog__stats">Диаметр 15 см, высота 10 см</span>
+                  <div class="catalog__description">
+                    <div class="catalog__about">
+                      <h2 class="catalog__title">
+                        Зайчик-попрыгайчик
+                      </h2>
+                      <span class="catalog__stats">Рост 30 см, вес 200 г</span>
+                    </div>
+                    <div class="catalog__price">1 200 руб.</div>
                   </div>
-                  <div class="catalog__price">690 руб.</div>
-                </div>
-              </li>
-              <li class="catalog__item">
-                <div class="catalog__image">
-                  <img class="catalog__picture" src="img/photo-toys-mobile@1x.jpg" alt="Большая корзинка для игрушек" width="260" height="195">
-                </div>
-                <div class="catalog__description">
-                  <div class="catalog__about">
-                    <h2 class="catalog__title">
-                      Большая корзинка для игрушек
-                    </h2>
-                    <span class="catalog__stats">Диаметр 30 см, высота 30 см</span>
+                </article>
+              </a>
+              <a class="catalog__link" href="#">
+                <article class="catalog__item">
+                  <div class="catalog__image">
+                    <img class="catalog__picture" src="img/photo-bowl-mobile@1x.jpg" alt="Корзинка для белья" width="260" height="195">
                   </div>
-                  <div class="catalog__price">1 500 руб.</div>
-                </div>
-              </li>
-            </ul>
+                  <div class="catalog__description">
+                    <div class="catalog__about">
+                      <h2 class="catalog__title">
+                        Корзинка для белья
+                      </h2>
+                      <span class="catalog__stats">Диаметр 15 см, высота 10 см</span>
+                    </div>
+                    <div class="catalog__price">690 руб.</div>
+                  </div>
+                </article>
+              </a>
+              <a class="catalog__link" href="#">
+                <article class="catalog__item">
+                  <div class="catalog__image">
+                    <img class="catalog__picture" src="img/photo-toys-mobile@1x.jpg" alt="Большая корзинка для игрушек" width="260" height="195">
+                  </div>
+                  <div class="catalog__description">
+                    <div class="catalog__about">
+                      <h2 class="catalog__title">
+                        Большая корзинка для игрушек
+                      </h2>
+                      <span class="catalog__stats">Диаметр 30 см, высота 30 см</span>
+                    </div>
+                    <div class="catalog__price">1 500 руб.</div>
+                  </div>
+                </article>
+              </a>
+            </div>
           </div>
         </section>
 
@@ -123,7 +130,7 @@
 
       <footer class="page-footer">
         <div class="page-footer-wrapper container">
-          <a class="page-footer__logo logo">
+          <a class="page-footer__logo logo" href="index.html">
             <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="логотип" width="86" height="35">
           </a>
           <div class="page-footer__socials socials">
@@ -170,5 +177,6 @@
         </div>
       </div>
     </div>
+    <script src="js/app.js"></script>
   </body>
 </html>

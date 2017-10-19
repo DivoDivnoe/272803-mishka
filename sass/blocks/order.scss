@@ -1,11 +1,11 @@
 .order__main-title {
-  padding: 70px 0;
+  padding: 70px 0 77px 0;
   margin: 0;
   background-color: #f1f1f1;
 }
 
 .order__text {
-  margin: 25px 0;
+  margin: 22px 0 32px 0;
   font-size: 13px;
   line-height: 1.85;
 }
@@ -15,21 +15,30 @@
 }
 
 @media screen and (min-width: $tablet) {
+  .order__form {
+    margin-bottom: 50px;
+  }
+
   .order__main-title {
-    padding: 100px 0 80px 0;
+    padding: 93px 0 80px 0;
     background-color: #f1f1f1;
   }
 
   .order__text {
-    margin: 75px 0 65px 0;
+    margin: 75px 0 11px 0;
     font-size: 17px;
     line-height: 1.76;
   }
 }
 
 @media screen and (min-width: $desktop) {
+  .order__main-title {
+    padding-bottom: 100px;
+  }
+
   .order__text {
-    margin: 115px 0 65px 0;
+    width: 83.33333333%;
+    margin: 125px 0 11px 0;
     padding-left: 175px;
   }
 

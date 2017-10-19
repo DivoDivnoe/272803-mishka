@@ -1,3 +1,14 @@
 .copyright {
-  padding: 25px 0;
+  padding: 27px 0;
+}
+
+.copyright__title {
+  font-weight: bold;
+  font-size: 19px;
+}
+
+@media screen and (min-width: $tablet) {
+  .copyright {
+    padding: 0 0;
+  }
 }

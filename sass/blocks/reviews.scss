@@ -2,6 +2,10 @@
   position: relative;
 }
 
+.reviews__title {
+  padding: 27px 0 25px 0;
+}
+
 .reviews__list-wrapper {
   position: relative;
 }
@@ -12,7 +16,7 @@
 }
 
 .reviews__author {
-  margin: 30px 0;
+  margin: 26px 0;
 }
 
 .reviews__author-item {
@@ -20,7 +24,7 @@
   font-size: 17px;
 
   &--name {
-    margin-bottom: 10px;
+    margin-bottom: 3px;
     font-weight: bold;
     color: black;
   }
@@ -32,7 +36,7 @@
 
 .reviews__arrows {
   display: flex;
-  margin-bottom: 38px;
+  margin-bottom: 42px;
 }
 
 .reviews__arrow {
@@ -49,17 +53,25 @@
 
 @media screen and (min-width: $tablet) {
   .reviews {
+    width: 768px;
+    margin: 0 auto;
+    padding-bottom: 105px;
     background: url("../img/review@1x.jpg") no-repeat top left;
   }
 
   .reviews__title {
-    padding-top: 80px;
+    padding-top: 79px;
+    padding-bottom: 49px;
+  }
+
+  .reviews__text {
+    line-height: 1.76;
   }
 
   .reviews__arrows {
     position: absolute;
-    right: 0;
-    bottom: 40px;
+    right: 4px;
+    bottom: 28px;
     width: 167px;
     margin-bottom: 0;
   }
@@ -68,17 +80,30 @@
     width: 50%;
   }
 
+  .reviews__author {
+    margin-top: 60px;
+  }
+
+  .reviews__author-item {
+    &--name {
+      font-size: 18px;
+    }
+  }
+
   .reviews__button {
     position: absolute;
-    top: 75px;
+    top: 79px;
     right: 0;
     width: auto;
+    padding-left: 38px;
+    padding-right: 38px;
   }
 }
 
 @media screen and (min-width: $desktop) {
   .reviews {
-    margin-bottom: 140px;
+    width: 1050px;
+    padding-bottom: 90px;
     background: initial;
   }
 
@@ -87,7 +112,23 @@
     background: url("../img/review@1x.jpg") no-repeat top left;
   }
 
+  .reviews__title {
+    padding-top: 70px;
+  }
+
   .reviews__arrows {
+    bottom: 98px;
     width: 175px;
+  }
+
+  .reviews__author {
+    margin-top: 42px;
+    margin-bottom: 95px;
+  }
+
+  .reviews__author-item {
+    &--name {
+      font-size: 17px;
+    }
   }
 }

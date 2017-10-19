@@ -1,13 +1,25 @@
 .button {
   display: inline-block;
   width: 100%;
-  padding: 15px;
+  padding: 12px;
   font-weight: bold;
   color: $grey;
   text-align: center;
   text-transform: uppercase;
   border: 2px solid $grey;
   cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+
+  &:hover,
+  &:active {
+    opacity: 1;
+    background-color: #444444;
+    color: white;
+  }
+
+  &:active {
+    color: rgba(white, 0.3);
+  }
 }
 
 @media screen and (min-width: $tablet) {
