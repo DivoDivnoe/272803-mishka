@@ -169,10 +169,11 @@
   }
 
   .main-nav__link {
+    padding: 31px 0 33px 0;
+
     &--catalog,
     &--form {
       position: static;
-      padding: 34px 0;
       font-size: 17px;
       transform: none;
     }

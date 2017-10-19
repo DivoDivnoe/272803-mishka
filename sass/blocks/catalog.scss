@@ -1,5 +1,9 @@
+.catalog {
+  margin-bottom: 30px;
+}
+
 .catalog__main-title {
-  padding: 69px 0 77px 0;
+  padding: 70px 0 77px 0;
   margin: 0 0 30px 0;
   background-color: #f1f1f1;
 }
@@ -112,6 +116,7 @@
 
 @media screen and (min-width: $desktop) {
   .catalog {
+    margin-bottom: 27px;
     padding-bottom: 30px;
   }
 
@@ -150,14 +155,17 @@
   }
 
   .catalog__description {
+    flex-grow: 1;
     padding-right: 55px;
   }
 
   .catalog__stats {
-    margin-bottom: 37px;
+    margin-bottom: 13px;
   }
 
   .catalog__price {
+    padding-top: 20px;
+    padding-bottom: 25px;
     font-size: 17px;
   }
 }

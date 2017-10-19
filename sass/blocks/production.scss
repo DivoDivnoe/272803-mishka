@@ -1,5 +1,5 @@
 .production {
-  padding-bottom: 90px;
+  padding-bottom: 58px;
 }
 
 .production__wrapper {
@@ -47,11 +47,13 @@
   width: auto;
   padding-left: 25px;
   padding-right: 25px;
+  margin-bottom: 32px;
 }
 
 @media screen and (min-width: $tablet) {
   .production {
-    margin-bottom: 45px;
+    padding-bottom: 0;
+    margin-bottom: 63px;
   }
 
   .production__main {
@@ -85,13 +87,14 @@
 
   .production__button {
     width: 100%;
+    margin-bottom: 45px;
   }
 }
 
 @media screen and (min-width: $desktop) {
   .production {
     margin-bottom: 0;
-    padding-bottom: 101px;
+    padding-bottom: 105px;
   }
 
   .production__wrapper {

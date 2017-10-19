@@ -50,7 +50,7 @@
   }
 
   &--color {
-    margin-bottom: 45px;
+    margin-bottom: 44px;
   }
 }
 
@@ -60,7 +60,7 @@
 }
 
 .form__colors {
-  margin-bottom: 7px;
+  margin-bottom: 8px;
 }
 
 .form__type-indicator,
@@ -102,6 +102,7 @@
   top: -10px;
   left: 0;
   display: block;
+  height: 39px;
 
   &::before,
   &::after {
@@ -109,7 +110,7 @@
     position: absolute;
     bottom: 30%;
     left: 40%;
-    width: 3px;
+    width: 4px;
     background-color: black;
     transform-origin: bottom;
     opacity: 0;
@@ -117,13 +118,13 @@
 
   &::before {
     left: 42%;
-    height: 20%;
+    height: 22%;
     transform: rotate(-45deg);
   }
 
   &::after {
     left: 38%;
-    height: 40%;
+    height: 50%;
     transform: rotate(45deg);
   }
 }
@@ -138,16 +139,16 @@
 }
 
 .form__person {
-  margin-bottom: 16px;
+  margin-bottom: 17px;
 }
 
 .form__person-item {
-  margin-bottom: 23px;
+  margin-bottom: 22px;
 }
 
 .form__field {
   width: 100%;
-  padding: 15px 0 16px 0;
+  padding: 16px 0 16px 0;
   font-size: 17px;
   border: 0;
   border-bottom: 2px solid black;
@@ -232,6 +233,7 @@
   .form__section-wrapper {
     display: flex;
     align-items: baseline;
+    padding-top: 5px;
     border-top: 0;
 
     &--contacts {
@@ -261,11 +263,12 @@
   }
 
   .form__types {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     padding-top: 55px;
   }
 
   .form__type-indicator {
+    top: -14px;
     width: 52px;
     height: 52px;
 
@@ -276,8 +279,9 @@
   }
 
   .form__colors {
-    padding-bottom: 16px;
-    padding-top: 55px;
+    padding-bottom: 8px;
+    padding-top: 58px;
+    margin-bottom: 0;
   }
 
   .form__checkboxes {
@@ -304,8 +308,9 @@
   }
 
   .form__color-indicator {
+    top: -15px;
     width: 54px;
-    height: 54px;
+    height: 52px;
 
     &::before {
       height: 30%;
@@ -319,7 +324,7 @@
   .form__person {
     padding-top: 41px;
     margin-bottom: 0;
-    padding-bottom: 25px;
+    padding-bottom: 27px;
   }
 
   .form__person-item {
@@ -328,6 +333,7 @@
   }
 
   .form__field {
+    padding-left: 18px;
     font-size: 19px;
 
     &--person {
@@ -342,7 +348,7 @@
   }
 
   .form__contacts {
-    padding-top: 34px;
+    padding-top: 28px;
     margin-bottom: 0;
     padding-bottom: 38px;
   }
@@ -358,7 +364,7 @@
   }
 
   .form__phone {
-    margin-bottom: 8px;
+    margin-bottom: 7px;
   }
 
   .form__email {
@@ -366,7 +372,7 @@
   }
 
   .form__extra {
-    padding: 50px 0 53px 0;
+    padding: 45px 0 53px 0;
     margin-bottom: 0;
   }
 
@@ -392,6 +398,7 @@
 @media screen and (min-width: $desktop) {
   .form__title {
     width: 16.66666666%;
+    padding-right: 12px;
     text-align: center;
 
     &--phone,
@@ -414,11 +421,11 @@
   }
 
   .form__types {
-    margin-bottom: 12px;
+    margin-bottom: 9px;
   }
 
   .form__colors {
-    padding-bottom: 17px;
+    padding-bottom: 9px;
   }
 
   .form__extra {
