@@ -37,6 +37,11 @@
   margin-bottom: 28px;
 }
 
+.hit__picture {
+  width: 260px;
+  height: auto;
+}
+
 .hit__price {
   padding: 24px 0 26px 0;
   font-weight: bold;
@@ -82,7 +87,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: 100%;
+    width: 334px;
     transform: translateX(100%);
   }
 
@@ -127,9 +132,9 @@
   }
 
   .hit__picture {
-    width: 150%;
+    width: 525px;
     bottom: 0;
-    top: initial;
+    top: auto;
   }
 
   .hit__description {
