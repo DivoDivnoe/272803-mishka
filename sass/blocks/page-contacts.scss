@@ -21,6 +21,10 @@
   height: 457px;
   background: #f5ead8 url("../img/map-mobile@1x.jpg") no-repeat center;
   background-size: cover;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/map-mobile@2x.jpg");
+  }
 }
 
 .page-contacts__button {
@@ -37,6 +41,14 @@
     padding: 62px 0 48px 0;
     font-size: 43px;
     line-height: 1.16;
+  }
+
+  .page-contacts__map-wrapper {
+    background-image: url("../img/map-tablet@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/map-tablet@2x.jpg");
+    }
   }
 
   .page-contacts__data {
@@ -78,6 +90,11 @@
     bottom: 0;
     right: 0;
     width: 50%;
+    background-image: url("../img/map-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/map-desktop@2x.jpg");
+    }
   }
 
   .page-contacts__button {

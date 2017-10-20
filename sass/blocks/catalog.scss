@@ -30,6 +30,8 @@
 
 .catalog__picture {
   display: block;
+  width: 260px;
+  height: 195px;
 }
 
 .catalog__description {
@@ -61,6 +63,7 @@
 
 @media screen and (min-width: $tablet) {
   .catalog {
+    margin-bottom: 0;
     padding-bottom: 53px;
   }
 
@@ -91,7 +94,7 @@
   .catalog__description {
     display: flex;
     flex-direction: column;
-    padding: 0 60px 0 25px;
+    padding: 0 65px 0 25px;
   }
 
   .catalog__title {
@@ -111,6 +114,7 @@
 
   .catalog__price {
     margin-top: auto;
+    font-size: 17px;
   }
 }
 
