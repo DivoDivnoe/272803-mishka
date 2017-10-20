@@ -57,6 +57,11 @@
     margin: 0 auto;
     padding-bottom: 105px;
     background: url("../img/review@1x.jpg") no-repeat top left;
+    background-size: 350px auto;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/review@2x.jpg");
+    }
   }
 
   .reviews__title {
@@ -110,6 +115,10 @@
   .reviews__wrapper {
     padding-left: 175px;
     background: url("../img/review@1x.jpg") no-repeat top left;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/review@2x.jpg");
+    }
   }
 
   .reviews__title {
