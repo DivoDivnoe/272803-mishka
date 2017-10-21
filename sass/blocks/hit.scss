@@ -34,7 +34,7 @@
 }
 
 .hit__stats {
-  margin-bottom: 28px;
+  margin-bottom: 30px;
 }
 
 .hit__picture {
@@ -51,7 +51,21 @@
 
 @media screen and (min-width: $tablet) {
   .hit {
+    position: relative;
     padding-bottom: 68px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: block;
+      height: 15px;
+      background: url("../img/bg-zigzag-line.svg") repeat center;
+      background-size: auto 15px;
+      opacity: 0.7;
+    }
   }
 
   .hit__heading {

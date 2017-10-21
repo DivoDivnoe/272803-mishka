@@ -1,8 +1,23 @@
 .socials__list {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 140px;
   margin: 0;
-  padding: 28px 0;
+  padding: 24px 0;
   list-style: none;
+}
+
+.socials__icon {
+  transition: fill 0.3s ease, opacity 0.2s ease;
+
+  &:hover {
+    fill: $light-green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media screen and (min-width: $tablet) {

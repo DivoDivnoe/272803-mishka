@@ -21,14 +21,41 @@
 @media screen and (min-width: $tablet) {
   .page-footer-wrapper {
     flex-direction: row;
-    justify-content: space-between;
   }
 
   .page-footer {
-    padding: 55px 0;
+    padding: 43px 0;
   }
 
   .page-footer__logo {
     display: block;
+
+    &[href] {
+      .page-footer__icon:hover {
+        fill: $light-green;
+      }
+
+      .page-footer__icon:active {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  .page-footer__socials {
+    margin-left: 159px;
+  }
+
+  .page-footer__copyright {
+    margin-left: auto;
+  }
+
+  .page-footer__icon {
+    transition: fill 0.2s ease, opacity 0.2s ease;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .page-footer__socials {
+    margin-left: 350px;
   }
 }

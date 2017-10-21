@@ -23,8 +23,14 @@
   font-size: 15px;
   line-height: 2;
 
+  &--address {
+    padding-top: 30px;
+  }
+
   &--email {
     position: relative;
+    padding-bottom: 2px;
+    transition: opacity 0.3s ease, color 0.3s ease;
 
     &::before {
       content: "";
@@ -34,6 +40,15 @@
       bottom: 0;
       height: 1px;
       background-color: $light-green;
+    }
+
+    &:hover,
+    &:active {
+      color: #46c1ae;
+    }
+
+    &:active {
+      opacity: 0.3;
     }
   }
 }

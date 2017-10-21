@@ -6,6 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     mainNavList.classList.remove('no-js');
     mainNav.querySelector('.main-nav__toggle').addEventListener('click', () => {
-        mainNavList.classList.toggle('main-nav__list--opened');
+        mainNav.classList.toggle('main-nav--opened');
     });
 });

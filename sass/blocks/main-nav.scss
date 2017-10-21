@@ -1,5 +1,15 @@
 .main-nav {
   display: flex;
+
+  &--opened {
+    .main-nav__toggle {
+      background-image: url("../img/icon-menu-close.svg");
+    }
+
+    .main-nav__list {
+      display: block;
+    }
+  }
 }
 
 .main-nav__list {
@@ -17,10 +27,6 @@
   &.no-js {
     display: block;
   }
-
-  &--opened {
-    display: block;
-  }
 }
 
 .main-nav__item {
@@ -30,9 +36,11 @@
 }
 
 .main-nav__link {
+  position: relative;
   display: block;
   padding: 25px 0 25px 75px;
   color: black;
+  transition: opacity 0.2s ease;
 
   &[href] {
     &:hover {
@@ -43,16 +51,49 @@
       opacity: 0.3;
     }
   }
+
+  &--search:hover,
+  &--basket:hover {
+    .main-nav__icon {
+      fill: $light-green;
+      opacity: 1;
+    }
+  }
+
+  &--search:active,
+  &--basket:active {
+    .main-nav__icon {
+      opacity: 0.3;
+    }
+  }
+}
+
+.main-nav__icon-wrapper {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 21px;
+  height: auto;
+  transform: translateY(-50%);
+}
+
+.main-nav__icon {
+  opacity: 0.2;
+  transition: fill 0.2s ease, opacity 0.2s ease;
 }
 
 .main-nav__toggle {
   width: 20px;
-  height: 14px;
-  margin-top: 31px;
-  margin-bottom: 33px;
+  height: 20px;
+  padding: 0;
+  margin-top: 28px;
+  margin-bottom: 30px;
   margin-left: auto;
-  background: white url("../img/icon-menu-open.svg") no-repeat center;
   border: none;
+  background: transparent url("../img/icon-menu-open.svg") center no-repeat;
   cursor: pointer;
 }
 
@@ -131,6 +172,20 @@
 
     &--basket {
       font-size: 17px;
+    }
+  }
+
+  .main-nav__icon-wrapper {
+    &--search {
+      top: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      transform: none;
+    }
+
+    &--basket {
+      left: 31px;
     }
   }
 
