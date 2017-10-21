@@ -38,9 +38,22 @@
   }
 
   .page-contacts__title {
-    padding: 62px 0 48px 0;
+    position: relative;
+    padding: 0;
+    margin: 62px 0 48px 0;
     font-size: 43px;
     line-height: 1.16;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      width: 47px;
+      height: 81px;
+      background: url("../../img/icon-flag.svg") no-repeat center;
+      transform: translateY(-50%);
+    }
   }
 
   .page-contacts__map-wrapper {
@@ -79,10 +92,14 @@
   }
 
   .page-contacts__title {
-    padding-top: 142px;
-    padding-bottom: 46px;
+    margin-top: 142px;
+    margin-bottom: 46px;
     font-size: 53px;
     line-height: 1.08;
+
+    &::after {
+      left: -112px;
+    }
   }
 
   .page-contacts__map-wrapper {

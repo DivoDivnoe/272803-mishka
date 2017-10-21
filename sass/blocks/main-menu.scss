@@ -34,6 +34,7 @@
 }
 
 .main-menu__link {
+  position: relative;
   display: block;
   padding: 27px 30px 30px 30px;
   font-weight: bold;
@@ -58,10 +59,47 @@
   }
 }
 
+.main-menu__icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.5;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--interior {
+    right: 37px;
+  }
+
+  &--toys {
+    right: 27px;
+  }
+}
+
 @media screen and (min-width: $tablet) {
   .main-menu {
+    position: relative;
+
     & .main-menu__item:hover {
       margin-top: -5px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: block;
+      height: 12px;
+      background: url("../img/bg-zigzag-fill.svg") repeat center;
+      background-size: auto 12px;
     }
   }
 

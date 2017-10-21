@@ -1,5 +1,11 @@
 .reviews__wrapper {
   position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.reviews__container {
+  position: relative;
 }
 
 .reviews__title {
@@ -43,8 +49,26 @@
   width: 50%;
   height: 52px;
   border: 1px solid #ececec;
-  background-color: transparent;
+  background: transparent no-repeat center;
+  background-size: 49px auto;
   cursor: pointer;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--prev {
+    background-image: url("../../img/icon-left-arrow.svg");
+  }
+
+  &--next {
+    background-image: url("../../img/icon-right-arrow.svg");
+  }
 }
 
 .reviews__button {
@@ -53,15 +77,32 @@
 
 @media screen and (min-width: $tablet) {
   .reviews {
-    width: 768px;
+    position: relative;
     margin: 0 auto;
     padding-bottom: 105px;
-    background: url("../img/review@1x.jpg") no-repeat top left;
-    background-size: 350px auto;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/review@2x.jpg");
     }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: block;
+      height: 15px;
+      background: url("../img/bg-zigzag-line.svg") repeat center;
+      background-size: auto 15px;
+      opacity: 0.7;
+    }
+  }
+
+  .reviews__wrapper {
+    width: 768px;
+    background: url("../img/review@1x.jpg") no-repeat top left;
+    background-size: 350px auto;
   }
 
   .reviews__title {
@@ -83,6 +124,7 @@
 
   .reviews__arrow {
     width: 50%;
+    border: 0;
   }
 
   .reviews__author {
@@ -107,18 +149,22 @@
 
 @media screen and (min-width: $desktop) {
   .reviews {
-    width: 1050px;
     padding-bottom: 90px;
     background: initial;
   }
 
   .reviews__wrapper {
+    width: 1050px;
     padding-left: 175px;
     background: url("../img/review@1x.jpg") no-repeat top left;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/review@2x.jpg");
     }
+  }
+
+  .reviews__container {
+    width: auto;
   }
 
   .reviews__title {

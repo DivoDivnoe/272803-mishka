@@ -15,6 +15,14 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  &[href]:hover {
+    opacity: 0.6;
+  }
+
+  &[href]:active {
+    opacity: 0.3;
+  }
 }
 
 @media screen and (min-width: $tablet) {
