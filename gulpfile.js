@@ -21,8 +21,12 @@ gulp.task("copy-html", function () {
 });
 
 gulp.task("copy-js", function () {
-    return gulp.src("js/**.*.js")
-        .pipe(gulp.dest("build/js"))
+    return gulp.src([
+        "js/**.*.js"
+    ], {
+        base: "."
+    })
+        .pipe(gulp.dest("build"))
         .pipe(server.stream());
 });
 

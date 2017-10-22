@@ -68,9 +68,26 @@
   position: absolute;
   top: 50%;
   right: 0;
-  opacity: 0.2;
   transform: translateY(-50%);
   cursor: pointer;
+
+  &:hover {
+    .catalog__icon {
+      opacity: 1;
+      fill: $light-green;
+    }
+  }
+
+  &:active {
+    .catalog__icon {
+      opacity: 0.3;
+    }
+  }
+}
+
+.catalog__icon {
+  opacity: 0.2;
+  transition: fill 0.2s ease, opacity 0.2s ease;
 }
 
 @media screen and (min-width: $tablet) {
