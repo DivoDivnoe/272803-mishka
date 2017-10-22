@@ -93,13 +93,14 @@
     &::after {
       content: "";
       position: absolute;
-      bottom: 0;
+      bottom: -11px;
       left: 0;
       right: 0;
       display: block;
-      height: 12px;
-      background: url("../img/bg-zigzag-fill.svg") repeat center;
-      background-size: auto 12px;
+      height: 23px;
+      background: url("../img/bg-zigzag-fill.svg") center;
+      background-repeat: repeat no-repeat;
+      background-size: contain;
     }
   }
 

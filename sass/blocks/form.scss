@@ -169,10 +169,38 @@
 .form__email {
   position: relative;
   padding-top: 14px;
+
+  &:hover,
+  &:focus {
+    .form__icon {
+      fill: $light-green;
+      opacity: 1;
+    }
+  }
+}
+
+.form__phone-label,
+.form__email-label {
+  position: relative;
 }
 
 .form__phone {
   margin-bottom: 40px;
+}
+
+.form__icon {
+  position: absolute;
+  top: 50%;
+  opacity: 0.2;
+  transform: translateY(-50%);
+
+  &--phone {
+    right: 10px;
+  }
+
+  &--email {
+    right: 0;
+  }
 }
 
 .form__email {
@@ -363,6 +391,16 @@
     flex-grow: 1;
   }
 
+  .form__icon {
+    &--phone {
+      right: 25px;
+    }
+
+    &--email {
+      right: 17px;
+    }
+  }
+
   .form__phone {
     margin-bottom: 7px;
   }
@@ -426,6 +464,16 @@
 
   .form__colors {
     padding-bottom: 9px;
+  }
+
+  .form__icon {
+    &--phone {
+      right: 7px;
+    }
+
+    &--email {
+      right: 0;
+    }
   }
 
   .form__extra {

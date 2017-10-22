@@ -1,17 +1,21 @@
 .about__list {
-  margin: 0;
-  padding: 0;
+  @include list-reset;
+  display: flex;
+  flex-direction: column;
   font-weight: bold;
   font-size: 17px;
   line-height: 1.18;
   color: black;
-  list-style: none;
 }
 
 .about__item {
   position: relative;
   padding-right: 10px;
   margin: 0 0 27px 0;
+
+  &:nth-child(2n) {
+    order: 1;
+  }
 }
 
 .about-item__icon-wrapper {
@@ -34,24 +38,19 @@
   }
 
   .about__list {
-    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     font-size: 20px;
     line-height: 1.1;
   }
 
   .about__item {
+    width: 50%;
     margin-bottom: 55px;
     padding-right: 0;
-  }
 
-  .about__list-column {
-    &--left {
-      margin-right: 100px;
-    }
-
-    &--right {
-      width: 50%;
-      flex-shrink: 0;
+    &:nth-child(2n) {
+      order: 0;
     }
   }
 }
@@ -72,11 +71,5 @@
 
   .about__list {
     width: 80%;
-  }
-
-  .about__list-column {
-    &--left {
-      margin-right: 115px;
-    }
   }
 }

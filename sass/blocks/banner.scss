@@ -20,10 +20,10 @@
     background-image: url("../img/hero-tablet@1x.jpg");
     background-position-y: 0;
     background-size: 1150px auto;
-  }
 
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/hero-tablet@2x.jpg");
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/hero-tablet@2x.jpg");
+    }
   }
 }
 
@@ -32,9 +32,9 @@
     background-image: url("../img/hero-desktop@1x.jpg");
     background-position-y: -40px;
     background-size: 1254px auto;
-  }
 
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/hero-desktop@2x.jpg");
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/hero-desktop@2x.jpg");
+    }
   }
 }

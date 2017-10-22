@@ -12,9 +12,7 @@
   @include list-reset;
 }
 
-.catalog__link {
-  display: block;
-
+.catalog__item {
   &:not(:last-child) {
     margin-bottom: 30px;
   }
@@ -26,6 +24,10 @@
   &:active {
     box-shadow: 0 3px 5px 0 rgba(black, 0.1);
   }
+}
+
+.catalog__link {
+  display: block;
 }
 
 .catalog__picture {
@@ -54,11 +56,38 @@
 }
 
 .catalog__price {
+  position: relative;
   padding: 21px 0 27px 0;
   font-weight: bold;
   font-size: 15px;
   line-height: 1.6;
   border-top: 1px solid #ececec;
+}
+
+.catalog__icon-wrapper {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  cursor: pointer;
+
+  &:hover {
+    .catalog__icon {
+      opacity: 1;
+      fill: $light-green;
+    }
+  }
+
+  &:active {
+    .catalog__icon {
+      opacity: 0.3;
+    }
+  }
+}
+
+.catalog__icon {
+  opacity: 0.2;
+  transition: fill 0.2s ease, opacity 0.2s ease;
 }
 
 @media screen and (min-width: $tablet) {
@@ -68,20 +97,40 @@
   }
 
   .catalog__main-title {
+    position: relative;
     padding: 95px 0 80px 0;
     margin-bottom: 80px;
     background-color: #f1f1f1;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -11px;
+      left: 0;
+      right: 0;
+      display: block;
+      height: 23px;
+      background: url("../img/bg-zigzag-fill.svg") repeat no-repeat center;
+      background-size: contain;
+    }
+  }
+
+  .catalog__title {
+    padding-right: 33px;
+    padding-bottom: 5px;
+    font-size: 20px;
+    line-height: 1.2;
   }
 
   .catalog__item {
     display: flex;
   }
 
-  .catalog__link:not(:last-child) {
+  .catalog__item:not(:last-child) {
     margin-bottom: 54px;
   }
 
-  .catalog__image,
+  .catalog__image-link,
   .catalog__description {
     width: 50%;
   }
@@ -94,13 +143,7 @@
   .catalog__description {
     display: flex;
     flex-direction: column;
-    padding: 0 65px 0 25px;
-  }
-
-  .catalog__title {
-    padding-bottom: 5px;
-    font-size: 20px;
-    line-height: 1.2;
+    padding: 0 32px 0 25px;
   }
 
   .catalog__stats {
@@ -138,10 +181,6 @@
   .catalog__item {
     flex-direction: column;
     flex-grow: 1;
-  }
-
-  .catalog__link {
-    display: flex;
     width: 315px;
 
     &:not(:last-child) {
@@ -153,6 +192,14 @@
     }
   }
 
+  .catalog__image-link {
+    width: auto;
+  }
+
+  .catalog__title {
+    padding-right: 17px;
+  }
+
   .catalog__image,
   .catalog__description {
     width: 100%;
@@ -160,7 +207,7 @@
 
   .catalog__description {
     flex-grow: 1;
-    padding-right: 55px;
+    padding-right: 30px;
   }
 
   .catalog__stats {
