@@ -20,8 +20,21 @@
   }
 
   .order__main-title {
+    position: relative;
     padding: 93px 0 80px 0;
     background-color: #f1f1f1;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -11px;
+      left: 0;
+      right: 0;
+      display: block;
+      height: 23px;
+      background: url("../img/bg-zigzag-fill.svg") repeat no-repeat center;
+      background-size: contain;
+    }
   }
 
   .order__text {

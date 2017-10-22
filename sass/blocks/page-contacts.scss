@@ -17,6 +17,7 @@
 }
 
 .page-contacts__map-wrapper {
+  position: relative;
   width: 100%;
   height: 457px;
   background: #f5ead8 url("../img/map-mobile@1x.jpg") no-repeat center;
@@ -24,6 +25,18 @@
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/map-mobile@2x.jpg");
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    display: block;
+    width: 67px;
+    height: 97px;
+    background: url("../img/map-pin.svg") no-repeat center;
+    z-index: 100;
   }
 }
 
@@ -51,7 +64,7 @@
       top: 50%;
       width: 47px;
       height: 81px;
-      background: url("../img/icon-flag.svg") no-repeat center;
+      background: url("../img/flag.svg") no-repeat center;
       transform: translateY(-50%);
     }
   }

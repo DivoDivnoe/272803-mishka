@@ -3,7 +3,7 @@
 
   &--opened {
     .main-nav__toggle {
-      background-image: url("../img/icon-menu-close.svg");
+      background-image: url("../img/menu-close.svg");
     }
 
     .main-nav__list {
@@ -93,7 +93,7 @@
   margin-bottom: 30px;
   margin-left: auto;
   border: none;
-  background: transparent url("../img/icon-menu-open.svg") center no-repeat;
+  background: transparent url("../img/menu-open.svg") center no-repeat;
   cursor: pointer;
 }
 
@@ -104,6 +104,7 @@
   display: none;
   width: 100%;
   transform: translateY(42px);
+  z-index: 1000;
 }
 
 .main-nav__extra-list {

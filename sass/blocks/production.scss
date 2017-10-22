@@ -11,6 +11,9 @@
   left: 0;
   right: 0;
   top: 97px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 150px;
   z-index: 1000;
   background: #e1e1e3 url("../img/video-mobile@1x.jpg") no-repeat center;
@@ -18,20 +21,6 @@
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/video-mobile@2x.jpg");
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    display: block;
-    margin: auto;
-    width: 100px;
-    height: 76px;
-    background: url("../img/icon-play.svg") no-repeat center;
   }
 }
 
@@ -56,6 +45,19 @@
 .production__icon {
   &--video {
     margin: 0 18px 0 29px;
+  }
+
+  &--play {
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
 
