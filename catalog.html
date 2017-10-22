@@ -72,9 +72,10 @@
             Каталог товаров
           </h1>
           <div class="container">
-            <div class="catalog__list">
-              <a class="catalog__link" href="#">
-                <article class="catalog__item">
+            <ul class="catalog__list">
+
+              <li class="catalog__item">
+                <a class="catalog__image-link" href="#">
                   <div class="catalog__image">
                     <picture>
                       <source media="(min-width: 1150px)" srcset="img/photo-hare-desktop@1x.jpg 1x, img/photo-hare-desktop@2x.jpg 2x">
@@ -82,19 +83,28 @@
                       <img class="catalog__picture" src="img/photo-hare-mobile@1x.jpg" alt="Зайчик-попрыгайчик" srcset="img/photo-hare-mobile@2x.jpg 2x">
                     </picture>
                   </div>
-                  <div class="catalog__description">
-                    <div class="catalog__about">
+                </a>
+                <div class="catalog__description">
+                  <a class="catalog__about-link" href="#">
+                  <div class="catalog__about">
                       <h2 class="catalog__title">
                         Зайчик-попрыгайчик
                       </h2>
                       <span class="catalog__stats">Рост 30 см, вес 200 г</span>
-                    </div>
-                    <div class="catalog__price">1 200 руб.</div>
                   </div>
-                </article>
-              </a>
-              <a class="catalog__link" href="#">
-                <article class="catalog__item">
+                  </a>
+                  <div class="catalog__price">
+                    <div class="catalog__icon-wrapper" title="Добавить в корзину">
+                      <svg class="catalog__icon" fill="#231f20" width="21" height="18">
+                        <use xlink:href="img/sprite.svg#icon-cart"></use>
+                      </svg>
+                    </div>
+                    1 200 руб.
+                  </div>
+                </div>
+              </li>
+              <li class="catalog__item">
+                <a class="catalog__image-link" href="#">
                   <div class="catalog__image">
                     <picture>
                       <source media="(min-width: 1150px)" srcset="img/photo-bowl-desktop@1x.jpg 1x, img/photo-bowl-desktop@2x.jpg 2x">
@@ -102,19 +112,28 @@
                       <img class="catalog__picture" src="img/photo-bowl-mobile@1x.jpg" alt="Корзинка для белья" srcset="img/photo-bowl-mobile@2x.jpg 2x">
                     </picture>
                   </div>
-                  <div class="catalog__description">
+                </a>
+                <div class="catalog__description">
+                  <a class="catalog__about-link" href="#">
                     <div class="catalog__about">
                       <h2 class="catalog__title">
                         Корзинка для белья
                       </h2>
                       <span class="catalog__stats">Диаметр 15 см, высота 10 см</span>
                     </div>
-                    <div class="catalog__price">690 руб.</div>
+                  </a>
+                  <div class="catalog__price">
+                    <div class="catalog__icon-wrapper" title="Добавить в корзину">
+                      <svg class="catalog__icon" fill="#231f20" width="21" height="18">
+                        <use xlink:href="img/sprite.svg#icon-cart"></use>
+                      </svg>
+                    </div>
+                    690 руб.
                   </div>
-                </article>
-              </a>
-              <a class="catalog__link" href="#">
-                <article class="catalog__item">
+                </div>
+              </li>
+              <li class="catalog__item">
+                <a class="catalog__image-link" href="#">
                   <div class="catalog__image">
                     <picture>
                       <source media="(min-width: 1150px)" srcset="img/photo-toys-desktop@1x.jpg 1x, img/photo-toys-desktop@2x.jpg 2x">
@@ -122,18 +141,27 @@
                       <img class="catalog__picture" src="img/photo-toys-mobile@1x.jpg" alt="Большая корзинка для игрушек" srcset="img/photo-bowl-mobile@2x.jpg 2x">
                     </picture>
                   </div>
-                  <div class="catalog__description">
+                </a>
+                <div class="catalog__description">
+                  <a class="catalog__about-link" href="#">
                     <div class="catalog__about">
                       <h2 class="catalog__title">
                         Большая корзинка для игрушек
                       </h2>
                       <span class="catalog__stats">Диаметр 30 см, высота 30 см</span>
                     </div>
-                    <div class="catalog__price">1 500 руб.</div>
+                  </a>
+                  <div class="catalog__price">
+                    <div class="catalog__icon-wrapper" title="Добавить в корзину">
+                      <svg class="catalog__icon" fill="#231f20" width="21" height="18">
+                        <use xlink:href="img/sprite.svg#icon-cart"></use>
+                      </svg>
+                    </div>
+                    1 500 руб.
                   </div>
-                </article>
-              </a>
-            </div>
+                </div>
+              </li>
+            </ul>
           </div>
         </section>
 
@@ -230,5 +258,6 @@
     <script src="js/pictureFill.js"></script>
     <script src="js/svgxuse.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/catalog.js"></script>
   </body>
 </html>

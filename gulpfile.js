@@ -20,12 +20,17 @@ gulp.task("copy-html", function () {
         .pipe(server.stream());
 });
 
+gulp.task("copy-js", function () {
+    return gulp.src("js/**.*.js")
+        .pipe(gulp.dest("build/js"))
+        .pipe(server.stream());
+});
+
 gulp.task("copy", ["copy-html"], function () {
     return gulp.src([
         "fonts/**",
         "img/**",
-        "js/**",
-        "*.html"
+        "js/**"
     ], {
         base: "."
     })
@@ -77,15 +82,16 @@ gulp.task("sprite", function () {
 
 gulp.task("serve", function () {
     server.init({
-        server: "./build",
+        server: "build/",
         notify: false,
         open: true,
         cors: true,
         ui: false
     });
 
-    gulp.watch("sass/**/*.sass", ["style"]);
+    gulp.watch("sass/**/*.{scss,sass}", ["style"]);
     gulp.watch("*.html", ["copy-html"]);
+    gulp.watch("js/**", ["copy-js"]);
 });
 
 gulp.task("build", function (done) {

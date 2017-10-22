@@ -40,6 +40,11 @@
   }
 }
 
+.page-contacts__map {
+  position: relative;
+  z-index: 1000;
+}
+
 .page-contacts__button {
   width: 260px;
   margin: 39px 0;

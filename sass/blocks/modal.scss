@@ -4,11 +4,15 @@
   left: 0;
   right: 0;
   bottom: 0;
-  display: none; //включается display: flex
+  display: none;
   justify-content: center;
   align-items: center;
   background-color: rgba(white, 0.9);
   z-index: 1000;
+
+  &--opened {
+    display: flex;
+  }
 }
 
 .modal {
