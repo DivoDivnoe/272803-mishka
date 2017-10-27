@@ -57,13 +57,15 @@
 }
 
 .production__text {
-  margin-bottom: 25px;
+  width: 192px;
+  margin: 26px auto 25px auto;
   font-size: 13px;
   line-height: 1.85;
 }
 
 .production__button {
-  width: 100%;
+  width: 192px;
+  margin: 0 auto 32px auto;
   text-align: center;
 }
 
@@ -105,8 +107,8 @@
   }
 
   .production__text {
-    margin-top: 0;
-    margin-bottom: 35px;
+    width: 100%;
+    margin: 0 0 35px 0;
     padding: 0;
     font-size: 15px;
     line-height: 2;
@@ -122,7 +124,7 @@
   .production {
     display: flex;
     margin-bottom: 0;
-    padding-bottom: 116px;
+    padding-bottom: 105px;
   }
 
   .production__wrapper {
@@ -163,5 +165,9 @@
 
   .production__text {
     margin-bottom: 46px;
+  }
+
+  .production__button {
+    margin-bottom: 59px;
   }
 }

@@ -1,5 +1,20 @@
 .hit {
+  position: relative;
   padding-bottom: 40px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    height: 6px;
+    background: url("../img/bg-zigzag-line.svg") center;
+    background-repeat: repeat no-repeat;
+    background-size: contain;
+    opacity: 0.7;
+  }
 }
 
 .hit__heading {
@@ -51,21 +66,11 @@
 
 @media screen and (min-width: $tablet) {
   .hit {
-    position: relative;
     padding-bottom: 68px;
 
     &::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      display: block;
       height: 15px;
-      background: url("../img/bg-zigzag-line.svg") center;
-      background-repeat: repeat no-repeat;
-      background-size: contain;
-      opacity: 0.7;
+      background-position: 27px center;
     }
   }
 
@@ -136,7 +141,6 @@
       width: 1050px;
       height: 21px;
       margin: 0 auto;
-      background-position: 27px center;
     }
   }
 
