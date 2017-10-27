@@ -87,6 +87,13 @@
   }
 
   .hit__item {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .hit__about,
+  .hit__buy {
     width: 50%;
     padding-right: 44px;
   }
@@ -98,15 +105,15 @@
   }
 
   .hit__picture {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 334px;
-    transform: translateX(100%);
+    width: 50%;
   }
 
   .hit__image {
     min-width: 100%;
+  }
+
+  .hit__buy {
+    margin-top: -134px;
   }
 
   .hit__price {
@@ -140,15 +147,19 @@
   }
 
   .hit__item {
-    width: 33.33333333%;
+    width: 875px;
     margin-left: 175px;
+  }
+
+  .hit__about,
+  .hit__buy {
+    width: 350px;
     padding-right: 58px;
   }
 
   .hit__picture {
     width: 525px;
-    bottom: 0;
-    top: auto;
+    margin-top: -159px;
   }
 
   .hit__description {

@@ -35,11 +35,13 @@
 
 .main-menu__link {
   position: relative;
-  display: block;
+  display: flex;
+  flex-direction: column;
   padding: 27px 30px 30px 30px;
   font-weight: bold;
   font-size: 19px;
   line-height: 1.26;
+  white-space: pre-line;
   color: white;
   vertical-align: middle;
 

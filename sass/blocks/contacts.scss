@@ -4,10 +4,6 @@
   border-collapse: collapse;
 }
 
-.contacts__column {
-  display: table-column;
-}
-
 .contacts__item {
   display: table-row;
 }
@@ -51,10 +47,6 @@
       opacity: 0.3;
     }
   }
-}
-
-.contacts__value-item {
-  display: block;
 }
 
 @media screen and (min-width: $tablet) {

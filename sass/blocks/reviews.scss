@@ -77,7 +77,6 @@
 
 @media screen and (min-width: $tablet) {
   .reviews {
-    position: relative;
     margin: 0 auto;
     padding-bottom: 105px;
 
@@ -110,16 +109,22 @@
     padding-bottom: 49px;
   }
 
+  .reviews__content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   .reviews__text {
     line-height: 1.76;
   }
 
   .reviews__arrows {
-    position: absolute;
-    right: 4px;
-    bottom: 28px;
+    position: relative;
     width: 167px;
+    margin-left: auto;
+    margin-top: -82px;
     margin-bottom: 0;
+    z-index: 100;
   }
 
   .reviews__arrow {
@@ -138,10 +143,10 @@
   }
 
   .reviews__button {
-    position: absolute;
-    top: 79px;
-    right: 0;
+    order: -1;
     width: auto;
+    margin-left: auto;
+    margin-top: -95px;
     padding-left: 38px;
     padding-right: 38px;
   }
