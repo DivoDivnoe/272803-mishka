@@ -168,6 +168,8 @@
   }
 
   .main-nav__menu-item {
+    background-color: transparent;
+
     &:nth-child(2n+1) {
       width: 167px;
     }
@@ -186,10 +188,6 @@
   .main-nav__menu-item,
   .main-nav__user-item {
     display: flex;
-  }
-
-  .main-nav__menu-item {
-    background-color: transparent;
   }
 
   .main-nav__user-item {
