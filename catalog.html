@@ -78,6 +78,9 @@
               <li class="catalog__item">
                 <a class="catalog__image-link" href="rabbit.html">
                   <picture>
+                    <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-hare-desktop@1x.webp 1x, img/photo-hare-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-hare-tablet@1x.webp 1x, img/photo-hare-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/photo-hare-mobile@1x.webp 1x, img/photo-hare-mobile@2x.webp 2x">
                     <source media="(min-width: 1150px)" srcset="img/photo-hare-desktop@1x.jpg 1x, img/photo-hare-desktop@2x.jpg 2x">
                     <source media="(min-width: 768px)" srcset="img/photo-hare-tablet@1x.jpg 1x, img/photo-hare-tablet@2x.jpg 2x">
                     <img class="catalog__picture" src="img/photo-hare-mobile@1x.jpg" alt="Зайчик-попрыгайчик" srcset="img/photo-hare-mobile@2x.jpg 2x">
@@ -93,12 +96,12 @@
                     </div>
                   </a>
                   <div class="catalog__price">
-                    <div class="catalog__icon-wrapper" title="Добавить в корзину">
+                    <a class="catalog__icon-link" title="Добавить в корзину" href="#">
                       <span class="visually-hidden">Добавить в корзину</span>
                       <svg class="catalog__icon" fill="#231f20" width="21" height="18">
                         <use xlink:href="img/sprite.svg#icon-cart"></use>
                       </svg>
-                    </div>
+                    </a>
                     1 200 руб.
                   </div>
                 </div>
@@ -106,6 +109,9 @@
               <li class="catalog__item">
                 <a class="catalog__image-link" href="laundry-basket.html">
                   <picture>
+                    <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-bowl-desktop@1x.webp 1x, img/photo-bowl-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-bowl-tablet@1x.webp 1x, img/photo-bowl-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/photo-bowl-mobile@1x.webp 1x, img/photo-bowl-mobile@2x.webp 2x">
                     <source media="(min-width: 1150px)" srcset="img/photo-bowl-desktop@1x.jpg 1x, img/photo-bowl-desktop@2x.jpg 2x">
                     <source media="(min-width: 768px)" srcset="img/photo-bowl-tablet@1x.jpg 1x, img/photo-bowl-tablet@2x.jpg 2x">
                     <img class="catalog__picture" src="img/photo-bowl-mobile@1x.jpg" alt="Корзинка для белья" srcset="img/photo-bowl-mobile@2x.jpg 2x">
@@ -121,12 +127,12 @@
                     </div>
                   </a>
                   <div class="catalog__price">
-                    <div class="catalog__icon-wrapper" title="Добавить в корзину">
+                    <a class="catalog__icon-link" title="Добавить в корзину" href="#">
                       <span class="visually-hidden">Добавить в корзину</span>
                       <svg class="catalog__icon" fill="#231f20" width="21" height="18">
                         <use xlink:href="img/sprite.svg#icon-cart"></use>
                       </svg>
-                    </div>
+                    </a>
                     690 руб.
                   </div>
                 </div>
@@ -134,6 +140,9 @@
               <li class="catalog__item">
                 <a class="catalog__image-link" href="toys-basket.html">
                   <picture>
+                    <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-toys-desktop@1x.webp 1x, img/photo-toys-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-toys-tablet@1x.webp 1x, img/photo-toys-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/photo-toys-mobile@1x.webp 1x, img/photo-bowl-mobile@2x.webp 2x">
                     <source media="(min-width: 1150px)" srcset="img/photo-toys-desktop@1x.jpg 1x, img/photo-toys-desktop@2x.jpg 2x">
                     <source media="(min-width: 768px)" srcset="img/photo-toys-tablet@1x.jpg 1x, img/photo-toys-tablet@2x.jpg 2x">
                     <img class="catalog__picture" src="img/photo-toys-mobile@1x.jpg" alt="Большая корзинка для игрушек" srcset="img/photo-bowl-mobile@2x.jpg 2x">
@@ -149,12 +158,12 @@
                     </div>
                   </a>
                   <div class="catalog__price">
-                    <div class="catalog__icon-wrapper" title="Добавить в корзину">
+                    <a class="catalog__icon-link" title="Добавить в корзину" href="#">
                       <span class="visually-hidden">Добавить в корзину</span>
                       <svg class="catalog__icon" fill="#231f20" width="21" height="18">
                         <use xlink:href="img/sprite.svg#icon-cart"></use>
                       </svg>
-                    </div>
+                    </a>
                     1 500 руб.
                   </div>
                 </div>
@@ -163,25 +172,23 @@
           </div>
         </section>
 
-        <section class="production section">
-          <div class="production__wrapper container">
+        <section class="production section container">
+          <div class="production__wrapper">
+            <h2 class="production__title">
+              <svg class="production__icon production__icon--video" fill="#63d1bb" width="50" height="34">
+                <use xlink:href="img/sprite.svg#icon-video"></use>
+              </svg>
+              Процесс производства
+            </h2>
             <div class="production__video-wrapper">
               <svg class="production__icon production__icon--play" width="100" height="76">
                 <use xlink:href="img/sprite.svg#icon-play"></use>
               </svg>
             </div>
-            <div class="production__main">
-              <h2 class="production__title">
-                <svg class="production__icon production__icon--video" fill="#63d1bb" width="50" height="34">
-                  <use xlink:href="img/sprite.svg#icon-video"></use>
-                </svg>
-                Процесс производства
-              </h2>
-              <p class="production__text">
-                По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
-              </p>
-              <a class="production__button button" href="#">Сделать заказ</a>
-            </div>
+            <p class="production__text">
+              По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
+            </p>
+            <a class="production__button button" href="#">Сделать заказ</a>
           </div>
         </section>
       </main>

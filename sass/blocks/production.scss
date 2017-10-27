@@ -3,19 +3,16 @@
 }
 
 .production__wrapper {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ececec;
 }
 
 .production__video-wrapper {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 97px;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 150px;
-  z-index: 1000;
   background: #e1e1e3 url("../img/video-mobile@1x.jpg") no-repeat center;
   background-size: 260px auto;
 
@@ -24,20 +21,12 @@
   }
 }
 
-.production__main {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 1px solid #ececec;
-}
-
 .production__title {
   display: flex;
   align-items: center;
   position: relative;
   margin: 0;
-  padding: 25px 0 200px 0;
+  padding: 25px 0 24px 0;
   font-size: 17px;
   line-height: 1.42;
 }
@@ -61,36 +50,38 @@
   }
 }
 
+.production__bottom {
+  margin-top: 27px;
+  margin-bottom: 32px;
+  padding: 0 34px;
+}
+
 .production__text {
-  margin-top: 0;
   margin-bottom: 25px;
-  padding-left: 34px;
-  padding-right: 40px;
   font-size: 13px;
   line-height: 1.85;
 }
 
 .production__button {
-  width: auto;
-  padding-left: 25px;
-  padding-right: 25px;
-  margin-bottom: 32px;
+  width: 100%;
+  text-align: center;
 }
 
 @media screen and (min-width: $tablet) {
   .production {
+    position: relative;
     padding-bottom: 0;
     margin-bottom: 63px;
   }
 
-  .production__main {
-    display: block;
-    padding: 0 42px;
+  .production__wrapper {
+    padding: 0 41px;
   }
 
   .production__title {
+    align-self: flex-start;
     margin: 0;
-    padding: 33px 0 27px 0;
+    padding: 489px 0 27px 0;
     font-size: 20px;
     line-height: 1.2;
   }
@@ -100,8 +91,9 @@
   }
 
   .production__video-wrapper {
-    position: relative;
+    position: absolute;
     top: 0;
+    left: 0;
     width: 100%;
     min-height: 455px;
     background-image: url("../img/video-tablet@1x.jpg");
@@ -128,13 +120,15 @@
 
 @media screen and (min-width: $desktop) {
   .production {
+    display: flex;
     margin-bottom: 0;
-    padding-bottom: 105px;
+    padding-bottom: 116px;
   }
 
   .production__wrapper {
-    display: flex;
-    padding-top: 0;
+    width: 368px;
+    margin-left: auto;
+    padding: 0 58px 0 78px;
   }
 
   .production__main {
@@ -168,6 +162,6 @@
   }
 
   .production__text {
-    margin-bottom: 49px;
+    margin-bottom: 46px;
   }
 }

@@ -105,7 +105,7 @@
         </section>
 
         <section class="hit section">
-          <div class="container">
+          <div class="hit__wrapper container">
             <div class="hit__heading">
               <h2 class="hit__title title">
                 Вязаные корзинки
@@ -149,6 +149,9 @@
               </div>
               <div class="hit__picture">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.webp 1x, img/triple-set-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.webp 1x, img/triple-set-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/triple-set-mobile@1x.webp 1x, img/triple-set-mobile@2x.webp 2x">
                   <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
                   <img class="hit__image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязаные корзинки">
@@ -176,7 +179,8 @@
                       <use xlink:href="img/sprite.svg#icon-feature-flower"></use>
                     </svg>
                   </div>
-                  Экологически чистые материалы
+                  <span class="about__item-text">Экологически
+                  чистые материалы</span>
                 </li>
                 <li class="about__item about__item--handmade">
                   <div class="about-item__icon-wrapper">
@@ -184,7 +188,8 @@
                       <use xlink:href="img/sprite.svg#icon-feature-ball"></use>
                     </svg>
                   </div>
-                  Связано вручную с любовью и умилением
+                  <span class="about__item-text">Связано вручную с
+                  любовью и умилением</span>
                 </li>
                 <li class="about__item about__item--scandinavian">
                   <div class="about-item__icon-wrapper">
@@ -192,7 +197,8 @@
                       <use xlink:href="img/sprite.svg#icon-feature-money"></use>
                     </svg>
                   </div>
-                  Скандинавский стиль по российской цене
+                  <span class="about__item-text">Скандинавский стиль
+                  по российской цене</span>
                 </li>
                 <li class="about__item about__item--domestic">
                   <div class="about-item__icon-wrapper">
@@ -200,7 +206,8 @@
                       <use xlink:href="img/sprite.svg#icon-feature-rocket"></use>
                     </svg>
                   </div>
-                  Поддержка отечественного производителя
+                  <span class="about__item-text">Поддержка отечественного
+                  производителя</span>
                 </li>
                 <li class="about__item about__item--likes">
                   <div class="about-item__icon-wrapper">
@@ -208,7 +215,8 @@
                       <use xlink:href="img/sprite.svg#icon-feature-heart"></use>
                     </svg>
                   </div>
-                  Увеличивает лайки на фотографиях
+                  <span class="about__item-text">Увеличивает лайки
+                  на фотографиях</span>
                 </li>
                 <li class="about__item about__item--packing">
                   <div class="about-item__icon-wrapper">
@@ -216,7 +224,8 @@
                       <use xlink:href="img/sprite.svg#icon-feature-gift"></use>
                     </svg>
                   </div>
-                  Поставляется в подарочной упаковке
+                  <span class="about__item-text">Поставляется в
+                  подарочной упаковке</span>
                 </li>
               </ul>
           </div>

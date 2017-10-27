@@ -420,8 +420,10 @@
   }
 
   .form__submit {
+    flex-shrink: 0;
     padding-left: 30px;
     padding-right: 30px;
+    margin-right: 50px;
   }
 }
 

@@ -8,9 +8,7 @@
 }
 
 .main-menu__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  @include list-reset;
 }
 
 .main-menu__item {
@@ -138,6 +136,14 @@
 @media screen and (min-width: $desktop) {
   .main-menu {
     margin-bottom: 77px;
+
+    &::after {
+      bottom: -21px;
+      width: 1120px;
+      height: 41px;
+      margin: 0 auto;
+      background-size: auto 37px;
+    }
   }
 
   .main-menu__wrapper {

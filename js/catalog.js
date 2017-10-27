@@ -3,7 +3,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     var ESCAPE_KEY_CODE = 27;
 
-    var icons = document.querySelectorAll(".catalog__icon-wrapper");
+    var icons = document.querySelectorAll(".catalog__icon-link");
     var modal = document.querySelector(".modal-wrapper");
     var modalButton = modal.querySelector(".modal__button");
 
@@ -15,16 +15,20 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     [].slice.call(icons).forEach(function (icon) {
-        icon.addEventListener("click", function () {
-            if (!modal.classList.contains("modal-wrapper--opened")) {
-                modal.classList.add("modal-wrapper--opened");
-                modalButton.addEventListener("click", clickHandler);
-                document.addEventListener('keydown', function (evt) {
-                    if (evt.keyCode === ESCAPE_KEY_CODE) {
-                        clickHandler(evt);
-                    }
-                });
+        icon.addEventListener("click", function (evt) {
+            evt.preventDefault();
+
+            if (modal.classList.contains("modal-wrapper--opened")) {
+                return false;
             }
+
+            modal.classList.add("modal-wrapper--opened");
+            modalButton.addEventListener("click", clickHandler);
+            document.addEventListener('keydown', function (evt) {
+                if (evt.keyCode === ESCAPE_KEY_CODE) {
+                    clickHandler(evt);
+                }
+            });
         });
     });
 });

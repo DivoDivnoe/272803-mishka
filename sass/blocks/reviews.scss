@@ -22,7 +22,7 @@
 }
 
 .reviews__author {
-  margin: 26px 0;
+  margin: 26px 0 30px 0;
 }
 
 .reviews__author-item {
@@ -42,7 +42,7 @@
 
 .reviews__arrows {
   display: flex;
-  margin-bottom: 42px;
+  margin-bottom: 38px;
 }
 
 .reviews__arrow {
@@ -50,7 +50,7 @@
   height: 52px;
   border: 1px solid #ececec;
   background: transparent no-repeat center;
-  background-size: 49px auto;
+  background-size: 51px auto;
   cursor: pointer;
   transition: opacity 0.2s ease;
 
@@ -77,8 +77,9 @@
 
 @media screen and (min-width: $tablet) {
   .reviews {
+    position: relative;
     margin: 0 auto;
-    padding-bottom: 105px;
+    padding-bottom: 84px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/review@2x.jpg");
@@ -92,8 +93,9 @@
       right: 0;
       display: block;
       height: 15px;
-      background: url("../img/bg-zigzag-line.svg") repeat center;
-      background-size: auto 15px;
+      background: url("../img/bg-zigzag-line.svg") center;
+      background-repeat: repeat no-repeat;
+      background-size: contain;
       opacity: 0.7;
     }
   }
@@ -105,8 +107,9 @@
   }
 
   .reviews__title {
-    padding-top: 79px;
-    padding-bottom: 49px;
+    max-width: 470px;
+    padding-top: 78px;
+    padding-bottom: 42px;
   }
 
   .reviews__content {
@@ -120,20 +123,20 @@
 
   .reviews__arrows {
     position: relative;
-    width: 167px;
+    width: 175px;
     margin-left: auto;
-    margin-top: -82px;
+    margin-top: -101px;
     margin-bottom: 0;
     z-index: 100;
   }
 
   .reviews__arrow {
-    width: 50%;
     border: 0;
   }
 
   .reviews__author {
     margin-top: 60px;
+    margin-bottom: 47px;
   }
 
   .reviews__author-item {
@@ -146,7 +149,7 @@
     order: -1;
     width: auto;
     margin-left: auto;
-    margin-top: -95px;
+    margin-top: -91px;
     padding-left: 38px;
     padding-right: 38px;
   }
@@ -156,6 +159,13 @@
   .reviews {
     padding-bottom: 90px;
     background: initial;
+
+    &::after {
+      width: 1050px;
+      height: 21px;
+      margin: 0 auto;
+      background-position: 27px center;
+    }
   }
 
   .reviews__wrapper {
@@ -173,12 +183,15 @@
   }
 
   .reviews__title {
+    max-width: 640px;
     padding-top: 70px;
+    padding-bottom: 41px;
   }
 
   .reviews__arrows {
     bottom: 98px;
     width: 175px;
+    margin-top: -52px;
   }
 
   .reviews__author {
