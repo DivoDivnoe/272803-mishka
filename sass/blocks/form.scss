@@ -40,17 +40,72 @@
   font-size: 17px;
   line-height: 1;
 
-  &--color,
-  &--type {
-    padding-left: 63px;
-  }
-
   &--type {
     margin-bottom: 25px;
+
+    &::before {
+      position: absolute;
+      top: -10px;
+      left: 0;
+      border-radius: 50%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 12px;
+      width: 16px;
+      height: 16px;
+      margin: auto;
+      background-color: $light-green;
+      border-radius: 50%;
+      opacity: 0;
+    }
   }
 
   &--color {
     margin-bottom: 44px;
+
+    &::before {
+      position: absolute;
+      top: -10px;
+      left: 0;
+      display: block;
+      height: 39px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 9px;
+      bottom: -1px;
+      width: 24px;
+      height: 20px;
+      background: url("../img/icon-tick.svg") no-repeat center;
+      opacity: 0;
+    }
+  }
+}
+
+.form__label--color,
+.form__label--type {
+  padding-left: 63px;
+
+  &::before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    border: 2px solid $grey;
+    transition: border-color 0.2s ease;
+
+    &:hover {
+      border-color: $light-green;
+    }
+
+    &:active {
+      border-color: rgba($grey, 0.3);
+    }
   }
 }
 
@@ -59,83 +114,13 @@
   display: none;
 }
 
+.form__type:checked + .form__label--type::after,
+.form__color:checked + .form__label--color::after {
+  opacity: 1;
+}
+
 .form__colors {
   margin-bottom: 8px;
-}
-
-.form__type-indicator,
-.form__color-indicator {
-  width: 40px;
-  height: 40px;
-  border: 2px solid $grey;
-  transition: border-color 0.2s ease;
-
-  &:hover {
-    border-color: $light-green;
-  }
-
-  &:active {
-    border-color: rgba($grey, 0.3);
-  }
-}
-
-.form__type-indicator {
-  position: absolute;
-  top: -10px;
-  left: 0;
-  display: flex;
-  border-radius: 50%;
-
-  &::after {
-    content: "";
-    width: 16px;
-    height: 16px;
-    margin: auto;
-    background-color: $light-green;
-    border-radius: 50%;
-    opacity: 0;
-  }
-}
-
-.form__color-indicator {
-  position: absolute;
-  top: -10px;
-  left: 0;
-  display: block;
-  height: 39px;
-
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 30%;
-    left: 40%;
-    width: 4px;
-    background-color: black;
-    transform-origin: bottom;
-    opacity: 0;
-  }
-
-  &::before {
-    left: 42%;
-    height: 22%;
-    transform: rotate(-45deg);
-  }
-
-  &::after {
-    left: 38%;
-    height: 50%;
-    transform: rotate(45deg);
-  }
-}
-
-.form__type:checked + .form__type-indicator::after {
-  opacity: 1;
-}
-
-.form__color:checked + .form__color-indicator::before,
-.form__color:checked + .form__color-indicator::after {
-  opacity: 1;
 }
 
 .form__person {
@@ -290,19 +275,58 @@
     width: 75%;
   }
 
+  .form__color-item {
+    &:nth-child(2n + 1) {
+      width: 262px;
+    }
+  }
+
   .form__types {
     margin-bottom: 10px;
     padding-top: 55px;
   }
 
-  .form__type-indicator {
-    top: -14px;
-    width: 52px;
-    height: 52px;
+  .form__label {
+    font-size: 19px;
 
-    &::after {
-      width: 22px;
-      height: 22px;
+    &--type,
+    &--color {
+      margin-bottom: 58px;
+      padding-left: 81px;
+    }
+
+    &--type {
+      &::before {
+        top: -14px;
+        width: 52px;
+        height: 52px;
+      }
+
+      &::after {
+        top: 1px;
+        left: 15px;
+        width: 22px;
+        height: 22px;
+      }
+    }
+
+    &--color {
+      &::before {
+        top: -15px;
+        width: 54px;
+        height: 52px;
+      }
+
+      &::after {
+        left: 11px;
+        bottom: -4px;
+        width: 33px;
+        height: 22px;
+      }
+    }
+
+    &--person {
+      padding-right: 25px;
     }
   }
 
@@ -315,38 +339,6 @@
   .form__checkboxes {
     display: flex;
     flex-wrap: wrap;
-  }
-
-  .form__label {
-    font-size: 19px;
-
-    &--type,
-    &--color {
-      margin-bottom: 58px;
-      padding-left: 81px;
-    }
-
-    &--color:nth-child(2n + 1) {
-      width: 262px;
-    }
-
-    &--person {
-      padding-right: 25px;
-    }
-  }
-
-  .form__color-indicator {
-    top: -15px;
-    width: 54px;
-    height: 52px;
-
-    &::before {
-      height: 30%;
-    }
-
-    &::after {
-      height: 50%;
-    }
   }
 
   .form__person {
@@ -428,8 +420,10 @@
   }
 
   .form__submit {
+    flex-shrink: 0;
     padding-left: 30px;
     padding-right: 30px;
+    margin-right: 50px;
   }
 }
 

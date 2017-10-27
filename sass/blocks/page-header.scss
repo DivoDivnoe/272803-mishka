@@ -10,26 +10,9 @@
   padding: 0 30px;
 }
 
-.page-header__logo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: opacity 0.2s ease;
-
-  &[href]:hover {
-    opacity: 0.6;
-  }
-
-  &[href]:active {
-    opacity: 0.3;
-  }
-}
-
 @media screen and (min-width: $tablet) {
   .page-header {
     border-top: 0;
-    border-bottom: 1px solid #ececec;
   }
 
   .page-header__wrapper {

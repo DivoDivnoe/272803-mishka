@@ -22,6 +22,10 @@ body {
   line-height: 1.42;
   font-family: "Open Sans", "Arial", sans-serif;
   color: $grey;
+
+  * {
+    font-family: inherit;
+  }
 }
 
 img {
