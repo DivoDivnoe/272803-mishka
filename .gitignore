@@ -5,7 +5,7 @@
 *.pdf
 *.psd
 *.sublime*
-build/
+mishka-all
 css/*.css
 node_modules/
 npm-debug.*
